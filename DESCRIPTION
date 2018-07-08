@@ -1,16 +1,20 @@
-Package: myassignment
-Type: Package
-Title: FARS Read
-Version: 0.1.0
-Author: Kazim
-Maintainer: Kazim <yourself@somewhere.net>
-Description: Reads FARS data into the environment
-License: GPL-2
+Package: fars
+Title: FARS Data
+Version: 0.0.0.1
+Author@R: Kazim (kazim@mail.com)
+Description: Coursera Final assignment.
+Depends: R (>= 3.3.3)
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-Suggests: 
-    knitr,
+Imports:
+   dplyr,
+   maps,
+   readr,
+   tidyr,
+   magrittr
+Suggests: knitr,
     rmarkdown,
     testthat
 VignetteBuilder: knitr

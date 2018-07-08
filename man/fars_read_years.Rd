@@ -2,40 +2,27 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{Read FARS files for one or more years.}
+\title{Read FARS years}
 \usage{
 fars_read_years(years)
 }
 \arguments{
-\item{years}{Vector of years' FARS files to open.  Vector members must be
-an integer, or a string or numeric that can be coerced to a string,
-of the year of interest.}
+\item{years}{A vector with a list of years}
 }
 \value{
-This function returns a list of tibbles, where each tibble contains
-  containing the year and month from the observations in the corresponding
-  year's FARS data.  If an invalid year is given, the corresponding
-  list will be NULL.
+A data.frame including entries in data by month, or NULL if the
+ \code{year} is not valid
 }
 \description{
-\code{fars_read_years} produces a list of tibbles of FARS data, given an
-  input vector of years.
-}
-\details{
-This function takes a vector of years and produces a list of tibbles,
-  where each tibble is that year's FARS file year and MONTH observations.
-  This is a simple function that strips all useful data out of the FARS
-  tables and produces a completely useless tibble, but is meant for
-  practice in the Coursera course.  For this function to work, valid
-  years should be entered. Invalid years will have a NULL entry in the
-  returned list.
+Ancillary function used by \code{fars_summarize_years}
 }
 \examples{
-fars_read_years(years = c(2013, 2014, 2015))
-fars_read_years(years = 2013)
-
-\dontrun{
-fars_read_years(years = 2000) # error
+fars_read_years(2013)
 }
+\seealso{
+\link{fars_read}
 
+\link{make_filename}
+
+\link{fars_summarize_years}
 }
