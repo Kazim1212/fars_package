@@ -6,7 +6,7 @@
 \alias{myassignment-package}
 \title{FARS Read}
 \description{
-Reads FARS data into the environment
+Reads FARS data into the environments
 }
 \author{
 Kazim
