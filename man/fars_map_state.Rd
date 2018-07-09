@@ -2,88 +2,34 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_map_state}
 \alias{fars_map_state}
-\title{Display accidents map by state and year}
+\title{Plots points where accidents for given state.num}
 \usage{
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{state.num}{An Integer with the State Code
-\tabular{cc}{
-  \strong{State Code} \tab \strong{State Name}    \cr
-  01 \tab  Alabama              \cr
-  02 \tab  Alaska               \cr
-  04 \tab  Arizona              \cr
-  05 \tab  Arkansas             \cr
-  06 \tab  California           \cr
-  08 \tab  Colorado             \cr
-  09 \tab  Connecticut          \cr
-  10 \tab  Delaware             \cr
-  11 \tab  District of Columbia \cr
-  12 \tab  Florida              \cr
-  13 \tab  Georgia              \cr
-  15 \tab  Hawaii               \cr
-  16 \tab  Idaho                \cr
-  17 \tab  Illinois             \cr
-  18 \tab  Indiana              \cr
-  19 \tab  Iowa                 \cr
-  20 \tab  Kansas               \cr
-  21 \tab  Kentucky             \cr
-  22 \tab  Louisiana            \cr
-  23 \tab  Maine                \cr
-  24 \tab  Maryland             \cr
-  25 \tab  Massachusetts        \cr
-  26 \tab  Michigan             \cr
-  27 \tab  Minnesota            \cr
-  28 \tab  Mississippi          \cr
-  29 \tab  Missouri             \cr
-  30 \tab  Montana              \cr
-  31 \tab  Nebraska             \cr
-  32 \tab  Nevada               \cr
-  33 \tab  New Hampshire        \cr
-  34 \tab  New Jersey           \cr
-  35 \tab  New Mexico           \cr
-  36 \tab  New York             \cr
-  37 \tab  North Carolina       \cr
-  38 \tab  North Dakota         \cr
-  39 \tab  Ohio                 \cr
-  40 \tab  Oklahoma             \cr
-  41 \tab  Oregon               \cr
-  42 \tab  Pennsylvania         \cr
-  43 \tab  Puerto Rico          \cr
-  44 \tab  Rhode Island         \cr
-  45 \tab  South Carolina       \cr
-  46 \tab  South Dakota         \cr
-  47 \tab  Tennessee            \cr
-  48 \tab  Texas                \cr
-  49 \tab  Utah                 \cr
-  50 \tab  Vermont              \cr
-  51 \tab  Virginia             \cr
-  52 \tab  Virgin Islands       \cr
-  53 \tab  Washington           \cr
-  54 \tab  West Virginia        \cr
-  55 \tab  Wisconsin            \cr
-  56 \tab  Wyoming
-}}
+\item{state.num}{state number to plot accidents for}
 
-\item{year}{A string, or an integer, with the input \code{year}}
+\item{year}{year of data to plot accidents that occured}
 }
 \value{
-None
+a data.frame of filtered data, if there are no rows then returns invisible(NULL)
 }
 \description{
-Displays a plot with a state map including the accidents location by year
-If the \code{state.num} is invalid the function shows an error
+\code{fars_map_state} plots the state given as an integer
+argument and plots accidents for a given year
+}
+\details{
+The function will take a year and state and attempt to plot accidents for a given state number.
+If there is no data for a state, the function will stop and throw an error. If there are no accidents
+a message will be returning indicating this.
+}
+\note{
+This function depends on map and points functions from the maps and graphics package respectively.
 }
 \examples{
 \dontrun{
-fars_map_state(49, 2015)
+  fars_map_state(1, 2013)
 }
-}
-\references{
-2014 FARS/NASS GES Coding and Validation Manual
-}
-\seealso{
-\link{fars_read}
 
-\link{make_filename}
+
 }

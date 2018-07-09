@@ -2,44 +2,32 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read}
 \alias{fars_read}
-\title{Read file with FARS data}
+\title{Read in data from a csv file
+## A note from the author:
+### Please leave feedback where appropriate.}
 \usage{
 fars_read(filename)
 }
 \arguments{
-\item{filename}{A character string with the name of the file to read, see
-notes.}
+\item{filename}{a character vector of filename of a csv file to read}
 }
 \value{
-A data frame with data readed from the csv file, or an error if the
-  file does not exists.
+this function returns a dataframe of the data read in from a csv file
 }
 \description{
-This function reads data from .csv file, stored on disk, from the \strong{US
-National Highway Traffic Safety Administration's} \emph{Fatality Analysis
-Reporting System} (FARS), which is a nationwide census, providing the
-American public yearly data, regarding fatal injuries suffered in motor
-vehicle traffic crashes.
+\code{fars_read} returns a data.frame with data from the supplised csv file.
 }
 \details{
-For more information, see:
-\itemize{
-  \item{\url{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}}
-  \item{\url{https://en.wikipedia.org/wiki/Fatality_Analysis_Reporting_System}}
-}
+The function takes a character vector of a path of a filename to read into R.
+If the filename does not exist the function will stop and an error will be thrown.
 }
 \note{
-To generate file name use: \code{\link{make_filename}}
+fars_read depends on read_csv and tbl_df from the readr and dplyr packages respectively
 }
 \examples{
-library(dplyr)
-library(readr)
-yr <- 2015
-data <- yr \%>\%
-  make_filename \%>\%
-  fars_read
-head(data)
+\dontrun{
+  fars_read("data/filename.csv")
 }
-\seealso{
-\link{make_filename}
+
+
 }

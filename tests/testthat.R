@@ -1,4 +1,4 @@
 library(testthat)
-library(fars)
+library(week2)
 
-test_check("fars")
+test_check("week2")

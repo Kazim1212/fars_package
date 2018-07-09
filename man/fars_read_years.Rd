@@ -2,27 +2,32 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{Read FARS years}
+\title{Read in multiple files by year}
 \usage{
 fars_read_years(years)
 }
 \arguments{
-\item{years}{A vector with a list of years}
+\item{years}{A vector of years to read in}
 }
 \value{
-A data.frame including entries in data by month, or NULL if the
- \code{year} is not valid
+returns a list of dataframes with columns MONTH and year, NULL when an error is encountered
 }
 \description{
-Ancillary function used by \code{fars_summarize_years}
+\code{fars_read_years} takes a vector of years it iterates over them to
+create filenames to read in and return with only the MONTH and year columns selected
+}
+\details{
+The function will create a filename depending on the year input, if the file does not exist an error will be thrown.
+If it does exist, it will attempt to read them in, mutate a new column with the year and then select
+the columns MONTH and year.
+}
+\note{
+this function depends on dplyr mutate and select functions
 }
 \examples{
-fars_read_years(2013)
+\dontrun{
+  fars_read_years(c(2013, 2014))
 }
-\seealso{
-\link{fars_read}
 
-\link{make_filename}
 
-\link{fars_summarize_years}
 }

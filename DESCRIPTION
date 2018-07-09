@@ -1,20 +1,15 @@
-Package: fars
-Title: Read Fatality Analysis Reporting System (FARS) data
-Version: 0.0.0.1
-Authors@R: person("Kazim", "Syed", email = "kazim@mail.com", role = c("aut", "cre"))
-Description: Peer-graded Assignment.
-Depends: R (>= 3.3.3)
-License: GPL-3
+Package: week2
+Type: Package
+Title: Peer-graded Assignment
+Version: 0.0.1
+Author: Kazim <email@example.com>
+Maintainer: Kazim <email@example.com>
+Description: Functions to interact with data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System.
+Depends: R (>= 3.3.1)
+License: GPL
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-Imports:
-   dplyr,
-   maps,
-   readr,
-   tidyr,
-   magrittr
-Suggests: knitr,
-    rmarkdown,
-    testthat
+Imports: dplyr, readr, graphics, maps, tidyr
+Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
