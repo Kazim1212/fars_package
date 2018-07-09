@@ -1,8 +1,8 @@
-https://ci.appveyor.com/api/github/webhook?id=o6iyaq1cwyq6y78j
-
-# fars_package
-## Data Source
-
+# COURSERA: BUILDING R PACKAGES
+Peer-graded Assignment   
+Kazim   
+email: kazim@mail.com   
+GNU GENERAL PUBLIC LICENSE Version 1, 9 July, 2018   
 
 
 The functions will be using data from the US National Highway Traffic Safety 
