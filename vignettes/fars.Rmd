@@ -1,5 +1,5 @@
 ---
-title: "FARS Data"
+title: "Fatality Analysis Reporting System (FARS)"
 author: "Kazim"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette

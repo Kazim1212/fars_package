@@ -1,7 +1,12 @@
 #  ----------------------------------------------------------------------------
-#  COURSERA: Assignment
-#  File: farsfunction.R
-#  Author: Kazim
+#  COURSERA: BUILDING R PACKAGES
+#  Peer-graded Assignment
+#  File: fars_functions.R
+#  (c) 2017 - Enrique Pérez Herrero
+#  email: eph.project1500@gmail.com
+#  GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+#  Start: 08/May/2017
+#  End:   18/May/2017
 #  ---------------------------------------------------------------------------
 
 #' Read file with FARS data

@@ -1,8 +1,8 @@
 Package: fars
-Title: FARS Data
+Title: Read Fatality Analysis Reporting System (FARS) data
 Version: 0.0.0.1
-Author@R: Kazim (kazim@mail.com)
-Description: Coursera Final assignment.
+Authors@R: person("Kazim", "Syed", email = "kazim@mail.com", role = c("aut", "cre"))
+Description: Peer-graded Assignment.
 Depends: R (>= 3.3.3)
 License: GPL-3
 Encoding: UTF-8
